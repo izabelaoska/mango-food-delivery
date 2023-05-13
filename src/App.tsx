@@ -1,5 +1,12 @@
+import { Layout } from './components/Layout'
+import { MainCard } from './components/MainCard'
+
 function App() {
-  return <div className="text-3xl font-bold underline">dis is an app</div>
+  return (
+    <Layout>
+      <MainCard />
+    </Layout>
+  )
 }
 
 export default App
