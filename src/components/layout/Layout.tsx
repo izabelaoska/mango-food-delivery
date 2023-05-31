@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainCard } from './MainCard'
+import { MainCard } from '../MainCard/MainCard'
 
 export const Layout = () => {
   return (
