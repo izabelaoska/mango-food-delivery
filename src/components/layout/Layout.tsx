@@ -3,10 +3,8 @@ import { MainCard } from '../MainCard/MainCard'
 
 export const Layout = () => {
   return (
-    <div className="w-screen h-screen bg-gradient-to-r from-[#FFE3BA] to-[#F5D7AC]">
-      <div className="h-full px-32 py-12">
-        <MainCard />
-      </div>
+    <div className="flex flex-col justify-center items-center w-screen h-[710px] bg-gradient-to-r from-[#FFE3BA] to-[#F5D7AC] p-12">
+      <MainCard />
     </div>
   )
 }
