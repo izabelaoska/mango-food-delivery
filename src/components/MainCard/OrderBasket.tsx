@@ -1,3 +1,3 @@
 export const OrderBasket = () => {
-  return <div className="">THIS IS THE ORDER BASKET</div>
+  return <div>THIS IS THE ORDER BASKET</div>
 }
