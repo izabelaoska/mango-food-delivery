@@ -6,9 +6,9 @@ import { OrderBasket } from './OrderBasket'
 export const MainCard = () => {
   return (
     <div className="flex w-full h-full">
-      <div className="flex flex-row w-full shadow-xl rounded-3xl bg-base-200">
+      <div className="flex flex-row w-full shadow-xl rounded-3xl bg-[#FFFFFF]">
         <Navbar />
-        <div className="flex-grow border-r border-gray-300">
+        <div className="flex-grow bg-[#F9F9FB]">
           <MenuPage />
         </div>
         <div className="flex-grow">
