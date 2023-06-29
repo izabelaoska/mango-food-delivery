@@ -1,4 +1,3 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { HomePage } from '../../pages/HomePage'
@@ -16,8 +15,14 @@ export const MainCard = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/chat" element={<ChatPage />} />
-          <Route path="/favourites" element={<FavouritesPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
+          <Route
+            path="/favourites"
+            element={<FavouritesPage />}
+          />
+          <Route
+            path="/settings"
+            element={<SettingsPage />}
+          />
         </Routes>
       </div>
     </div>

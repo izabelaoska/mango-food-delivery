@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.layoutStyle {
+  @apply flex flex-col justify-center items-center w-screen h-[710px] bg-gradient-to-r from-[#FFE3BA] to-[#F5D7AC] p-12;
+}
+
+.pageComponentStyle {
+  @apply flex-grow w-full bg-[#F9F9FB] rounded-tr-3xl rounded-br-3xl;
+}
