@@ -1,19 +1,24 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { Navbar } from './Navbar'
-import { MenuPage } from './MenuPage'
-import { OrderBasket } from './OrderBasket'
+import { HomePage } from '../../pages/HomePage'
+import { ChatPage } from '../../pages/ChatPage'
+import { FavouritesPage } from '../../pages/FavouritesPage'
+import { SettingsPage } from '../../pages/SettingsPage'
 
 export const MainCard = () => {
   return (
-    <div className="flex w-full h-full">
+    <div className="flex w-full h-full px-20">
       <div className="flex flex-row w-full shadow-xl rounded-3xl bg-[#FFFFFF]">
-        <Navbar />
-        <div className="flex-grow bg-[#F9F9FB]">
-          <MenuPage />
+        <div className="justify-center hidden md:flex md:w-24">
+          <Navbar />
         </div>
-        <div className="flex-grow">
-          <OrderBasket />
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/chat" element={<ChatPage />} />
+          <Route path="/favourites" element={<FavouritesPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+        </Routes>
       </div>
     </div>
   )

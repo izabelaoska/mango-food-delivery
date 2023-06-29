@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHome,
@@ -8,19 +9,19 @@ import {
 
 export const Navbar = () => {
   return (
-    <div className="flex flex-col items-center w-32">
-      <div className="mt-10">
+    <div className="flex flex-col items-center">
+      <Link to="/" className=" mt-14">
         <FontAwesomeIcon icon={faHome} color="#FB9401" size="lg" />
-      </div>
-      <div className="mt-8">
+      </Link>
+      <Link to="/chat" className="mt-10">
         <FontAwesomeIcon icon={faCommentDots} color="#FB9401" size="lg" />
-      </div>
-      <div className="mt-8">
+      </Link>
+      <Link to="/favourites" className="mt-10">
         <FontAwesomeIcon icon={faHeart} color="#FB9401" size="lg" />
-      </div>
-      <div className="mt-8">
+      </Link>
+      <Link to="/settings" className="mt-10">
         <FontAwesomeIcon icon={faGear} color="#FB9401" size="lg" />
-      </div>
+      </Link>
     </div>
   )
 }
