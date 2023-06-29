@@ -4,10 +4,10 @@ import { OrderBasket } from '../components/MainCard/OrderBasket'
 export const HomePage = () => {
   return (
     <>
-      <div className="flex-grow bg-[#F9F9FB] rounded-3xl md:rounded-none">
+      <div className="w-2/3 bg-[#F9F9FB] rounded-3xl md:rounded-none">
         <MenuPage />
       </div>
-      <div className="flex-grow">
+      <div className="w-1/3">
         <OrderBasket />
       </div>
     </>
