@@ -5,6 +5,9 @@ import { ChatPage } from '../../pages/ChatPage'
 import { FavouritesPage } from '../../pages/FavouritesPage'
 import { SettingsPage } from '../../pages/SettingsPage'
 
+// TODO: LOGIN AND SIGNUP PAGES -> if not logged in redirected to them
+// + ADD Account settings which will redirect to Settings Page
+
 export const MainCard = () => {
   return (
     <div className="flex w-full h-full px-20">

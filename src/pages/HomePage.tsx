@@ -1,4 +1,4 @@
-import { MenuPage } from '../components/MainCard/MenuPage'
+import { MenuPage } from '../components/MainCard/MenuPage/MenuPage'
 import { OrderBasket } from '../components/MainCard/OrderBasket'
 
 export const HomePage = () => {
