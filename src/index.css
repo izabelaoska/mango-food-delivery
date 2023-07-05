@@ -9,3 +9,7 @@
 .pageComponentStyle {
   @apply flex-grow w-full bg-[#F9F9FB] rounded-tr-3xl rounded-br-3xl;
 }
+
+.stripe {
+  @apply w-[500px] absolute top-6  h-10 -rotate-45;
+}

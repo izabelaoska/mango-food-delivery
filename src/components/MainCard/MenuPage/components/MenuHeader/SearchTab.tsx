@@ -7,7 +7,7 @@ export const SearchTab = () => {
       <input
         type="text"
         placeholder="Search by food name"
-        className="w-full max-w-xs pr-8 input rounded-3xl"
+        className="w-full max-w-xs pr-8 input rounded-3xl input-md"
       />
       <FontAwesomeIcon
         icon={faMagnifyingGlass}
