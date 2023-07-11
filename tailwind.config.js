@@ -6,6 +6,11 @@ export default {
   theme: {
     extend: {},
   },
+  variants: {
+    extend: {
+      scale: ['responsive', 'hover', 'focus', 'active'],
+    },
+  },
   plugins: [daisyui],
   daisyui: {
     themes: false,

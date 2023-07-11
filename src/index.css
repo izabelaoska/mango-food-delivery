@@ -13,3 +13,9 @@
 .stripe {
   @apply w-[500px] absolute top-6  h-10 -rotate-45;
 }
+
+.button:focus,
+.button:active {
+  transform: scale(1.07);
+  transition: transform 0.5s ease-in-out;
+}

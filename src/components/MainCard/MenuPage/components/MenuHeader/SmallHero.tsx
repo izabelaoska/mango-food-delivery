@@ -1,7 +1,7 @@
 export const SmallHero = () => {
   return (
     <>
-      <div className="relative p-8 mx-6 mb-6 bg-[#FFECD0] rounded-3xl flex justify-between overflow-hidden">
+      <div className="relative p-6 mx-6 bg-[#FFECD0] rounded-3xl flex justify-between overflow-hidden">
         <div className="stripes">
           <div className="stripe left-[-251px] bg-[#ff0000]" />
           <div className="stripe left-[-195px] bg-[#ff4d00]" />
