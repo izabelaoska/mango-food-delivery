@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareCaretRight } from '@fortawesome/free-solid-svg-icons'
 import { SmallMenuCard } from './SmallMenuCard'
+import { LargeMenuCard } from './LargeMenuCard'
 
 export const MenuCategories = () => {
   return (
@@ -21,6 +22,7 @@ export const MenuCategories = () => {
         </div>
       </div>
       <SmallMenuCard />
+      <LargeMenuCard />
     </>
   )
 }

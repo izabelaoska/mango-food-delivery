@@ -22,17 +22,17 @@ const MenuItem: React.FC<MenuItemProps> = ({
   label,
 }) => {
   return (
-    <button className="flex flex-col items-center justify-center w-24 h-32 gap-3 p-5 overflow-hidden bg-white rounded-lg shadow-sm button">
+    <button className="button">
       <FontAwesomeIcon
         icon={icon}
         color="#FB9401"
-        size="2xl"
+        size="xl"
       />
-      <p>{label}</p>
+      <p className="text-sm">{label}</p>
       <FontAwesomeIcon
         icon={faCircleRight}
         color="#FB9401"
-        size="lg"
+        size="sm"
       />
     </button>
   )
@@ -48,7 +48,7 @@ export const SmallMenuCard: React.FC = () => {
     { icon: faAppleWhole, label: 'Snacks' },
   ]
   return (
-    <div className="flex justify-between px-5">
+    <div className="flex justify-between px-8">
       {menuItems.map((item, index) => (
         <MenuItem
           key={index}
