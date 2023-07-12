@@ -11,8 +11,7 @@ export const SearchTab = () => {
       />
       <FontAwesomeIcon
         icon={faMagnifyingGlass}
-        color="#9CA3AF"
-        className="absolute pr-2 transform -translate-y-1/2 right-2 top-1/2"
+        className="absolute pr-2 transform -translate-y-1/2 right-2 top-1/2 text-grey_fill"
       />
     </div>
   )

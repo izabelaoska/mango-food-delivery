@@ -6,28 +6,28 @@ export const Rating = () => {
       <input
         type="radio"
         name="rating-1"
-        className="mask mask-star bg-[#FB9401]"
+        className="mask mask-star bg-orange_fill"
       />
       <input
         type="radio"
         name="rating-1"
-        className="mask mask-star bg-[#FB9401]"
+        className="mask mask-star bg-orange_fill"
         checked
       />
       <input
         type="radio"
         name="rating-1"
-        className="mask mask-star bg-[#FB9401]"
+        className="mask mask-star bg-orange_fill"
       />
       <input
         type="radio"
         name="rating-1"
-        className="mask mask-star bg-[#FB9401]"
+        className="mask mask-star bg-orange_fill"
       />
       <input
         type="radio"
         name="rating-1"
-        className="mask mask-star bg-[#FB9401]"
+        className="mask mask-star bg-orange_fill"
       />
     </div>
   )

@@ -25,13 +25,13 @@ const MenuItem: React.FC<MenuItemProps> = ({
     <button className="button">
       <FontAwesomeIcon
         icon={icon}
-        color="#FB9401"
         size="xl"
+        className="text-orange_fill"
       />
       <p className="text-sm">{label}</p>
       <FontAwesomeIcon
         icon={faCircleRight}
-        color="#FB9401"
+        className="text-orange_fill"
         size="sm"
       />
     </button>

@@ -16,9 +16,15 @@
 
 .button:focus,
 .button:active {
-  transform: scale(1.07);
-  transition: transform 0.5s ease-in-out;
+  transform: scale(1.16);
+  transition: transform 0.7s ease-in-out;
 }
 .button {
   @apply flex flex-col items-center justify-center w-20 gap-3 p-5 overflow-hidden bg-white rounded-lg shadow-sm h-28;
+}
+
+.icon:focus,
+.icon:active {
+  transform: scale(1.07);
+  transition: transform 0.5s ease-in-out;
 }

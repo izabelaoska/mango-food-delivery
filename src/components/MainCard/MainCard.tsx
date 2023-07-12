@@ -11,7 +11,7 @@ import { SettingsPage } from '../../pages/SettingsPage'
 export const MainCard = () => {
   return (
     <div className="flex w-full h-full px-20">
-      <div className="flex flex-row w-full shadow-xl rounded-3xl bg-[#FFFFFF]">
+      <div className="flex flex-row w-full shadow-xl rounded-3xl bg-primary">
         <div className="justify-center hidden md:flex md:w-24">
           <Navbar />
         </div>

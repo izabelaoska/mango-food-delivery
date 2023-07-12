@@ -1,16 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareCaretRight } from '@fortawesome/free-solid-svg-icons'
-import { SmallMenuCard } from './SmallMenuCard'
-import { LargeMenuCard } from './LargeMenuCard'
 
-export const MenuCategories = () => {
+export const OrderMenu = () => {
   return (
-    <>
-      <div className="flex justify-between p-5">
+    <div className="px-8 py-8">
+      <div className="flex items-center justify-between gap-2">
         <div className="text-xl font-semibold">
-          Menu Category
+          Order Menu
         </div>
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex justify-between gap-2">
           <h3>View all</h3>
           <button className="icon">
             <FontAwesomeIcon
@@ -21,8 +19,6 @@ export const MenuCategories = () => {
           </button>
         </div>
       </div>
-      <SmallMenuCard />
-      <LargeMenuCard />
-    </>
+    </div>
   )
 }

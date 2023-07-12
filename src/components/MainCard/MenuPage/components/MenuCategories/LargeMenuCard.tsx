@@ -33,12 +33,13 @@ export const LargeMenuItem: React.FC<
         </div>
         <div className="flex items-center justify-between gap-16">
           <Rating />
-          <FontAwesomeIcon
-            icon={faCirclePlus}
-            color="#FB9401"
-            size="xl"
-            className="mb-2"
-          />
+          <button className="icon">
+            <FontAwesomeIcon
+              icon={faCirclePlus}
+              size="xl"
+              className="mb-2 text-orange_fill"
+            />
+          </button>
         </div>
       </div>
     </>

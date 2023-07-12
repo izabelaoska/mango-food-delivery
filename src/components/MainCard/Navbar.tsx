@@ -13,28 +13,28 @@ export const Navbar = () => {
       <Link to="/" className="mt-14">
         <FontAwesomeIcon
           icon={faHome}
-          color="#FB9401"
+          className="text-orange_fill"
           size="lg"
         />
       </Link>
       <Link to="/chat" className="mt-10">
         <FontAwesomeIcon
           icon={faCommentDots}
-          color="#FB9401"
+          className="text-orange_fill"
           size="lg"
         />
       </Link>
       <Link to="/favourites" className="mt-10">
         <FontAwesomeIcon
           icon={faHeart}
-          color="#FB9401"
+          className="text-orange_fill"
           size="lg"
         />
       </Link>
       <Link to="/settings" className="mt-10">
         <FontAwesomeIcon
           icon={faGear}
-          color="#FB9401"
+          className="text-orange_fill"
           size="lg"
         />
       </Link>
