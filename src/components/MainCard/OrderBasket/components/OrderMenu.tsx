@@ -3,7 +3,7 @@ import { faSquareCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 export const OrderMenu = () => {
   return (
-    <div className="px-8 py-8">
+    <div className="flex flex-col h-full p-8">
       <div className="flex items-center justify-between gap-2">
         <div className="text-xl font-semibold">
           Order Menu
@@ -18,6 +18,12 @@ export const OrderMenu = () => {
             />
           </button>
         </div>
+      </div>
+      <div>This will be order</div>
+      <div className="mt-auto text-center">
+        <button className="mt-auto border-none btn btn-secondary btn-md rounded-2xl btn-wide bg-orange_fill hover:bg-orange_fill">
+          CHECKOUT
+        </button>
       </div>
     </div>
   )

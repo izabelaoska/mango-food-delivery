@@ -3,7 +3,7 @@ import { OrderMenu } from './components/OrderMenu'
 
 export const OrderBasket = () => {
   return (
-    <div>
+    <div className="flex flex-col h-full">
       <OrderBasketHeader />
       <OrderMenu />
     </div>
