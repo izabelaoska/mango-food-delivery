@@ -1,10 +1,16 @@
 import React from 'react'
-import Pizza1 from '../../../../../resources/images/Pizza1.png'
-import Pizza2 from '../../../../../resources/images/Pizza2.png'
-import Pizza3 from '../../../../../resources/images/Pizza3.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import {
+  faCirclePlus,
+  faHeart,
+} from '@fortawesome/free-solid-svg-icons'
 import { Rating } from '../../../../../helpers/components/Rating.tsx'
+import {
+  useMenuStore,
+  MenuState,
+} from '../../../../../stores/menuStore.ts'
+
+import { useOrderStore } from '../../../../../stores/orderStore.ts'
 
 interface LargeMenuCardProps {
   label: string
@@ -15,10 +21,18 @@ interface LargeMenuCardProps {
 export const LargeMenuItem: React.FC<
   LargeMenuCardProps
 > = ({ label, price, imgSrc }) => {
+  const addItem = useOrderStore((state) => state.addItem)
+
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-48 h-48 p-5 overflow-hidden bg-white rounded-lg shadow-sm">
+      <div className="relative flex flex-col items-center justify-center w-48 h-48 p-5 overflow-hidden bg-white rounded-lg shadow-sm">
         <div className="pb-2">
+          <button className="absolute icon top-3 right-3">
+            <FontAwesomeIcon
+              icon={faHeart}
+              className="text-orange_fill"
+            />
+          </button>
           <img
             src={imgSrc}
             alt={label}
@@ -33,7 +47,12 @@ export const LargeMenuItem: React.FC<
         </div>
         <div className="flex items-center justify-between gap-16">
           <Rating />
-          <button className="icon">
+          <button
+            className="icon"
+            onClick={() => {
+              addItem({ label, price, imgSrc }) // Add item to the order store
+            }}
+          >
             <FontAwesomeIcon
               icon={faCirclePlus}
               size="xl"
@@ -46,23 +65,9 @@ export const LargeMenuItem: React.FC<
   )
 }
 export const LargeMenuCard: React.FC = () => {
-  const largeMenuItems = [
-    {
-      label: 'Mushroom Pizza',
-      price: '£8.50',
-      imgSrc: Pizza1,
-    },
-    {
-      label: 'Italian Pizza',
-      price: '£9.50',
-      imgSrc: Pizza2,
-    },
-    {
-      label: 'Sausage Pizza',
-      price: '£10.50',
-      imgSrc: Pizza3,
-    },
-  ]
+  const largeMenuItems = useMenuStore(
+    (state: MenuState) => state.items
+  )
   return (
     <div className="flex justify-between px-8 py-4">
       {largeMenuItems.map((item) => (

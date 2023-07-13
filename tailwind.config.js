@@ -16,6 +16,7 @@ export default {
         orange_300: '#ff7400',
         orange_200: '#ff9a00',
         orange_100: '#ffc100',
+        orange_50: '#FFEED2',
       },
     },
   },
