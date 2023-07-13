@@ -7,20 +7,19 @@ type SmallCardProps = {
   label: string
   price: string
   imgSrc: string
-  id: number
+  quantity: number
 }
 export const SmallBasketCard: React.FC<SmallCardProps> = ({
-  id,
   label,
-  price,
   imgSrc,
+  quantity,
 }) => {
   const removeItem = useOrderStore(
     (state) => state.removeItem
   )
   const handleRemoveItem = () => {
-    console.log('Removing item with id: ', id)
-    removeItem(id)
+    console.log('label', label)
+    removeItem(label)
   }
   return (
     <>
@@ -35,7 +34,10 @@ export const SmallBasketCard: React.FC<SmallCardProps> = ({
         <div>
           <h2 className="text-md">{label}</h2>
           <p className="text-sm font-semibold">
-            quantity here
+            <span className="text-orange_fill">x </span>
+            <span className="text-gray-600">
+              {quantity}
+            </span>
           </p>
         </div>
         <div className="flex flex-col items-center gap-1 ml-auto align-middle">

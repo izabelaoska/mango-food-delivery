@@ -1,4 +1,3 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCirclePlus,
@@ -7,18 +6,29 @@ import {
 import { Rating } from '../../../../../helpers/components/Rating.tsx'
 
 import { useOrderStore } from '../../../../../stores/orderStore.ts'
-import { availableItems } from '../../../../../helpers/components/data.ts'
 
-interface LargeMenuCardProps {
+import React from 'react'
+
+interface Props {
   label: string
   price: string
   imgSrc: string
 }
-
-export const LargeMenuItem: React.FC<
-  LargeMenuCardProps
-> = ({ label, price, imgSrc }) => {
+export const LargeMenuItem: React.FC<Props> = ({
+  label,
+  price,
+  imgSrc,
+}) => {
+  console.log('LargeMenuItem rendered')
   const addItem = useOrderStore((state) => state.addItem)
+  const handleAddToCart = () => {
+    const item = {
+      label: label,
+      price: price,
+      imgSrc: imgSrc,
+    }
+    addItem(item)
+  }
 
   return (
     <>
@@ -37,7 +47,7 @@ export const LargeMenuItem: React.FC<
           />
         </div>
         <div className="flex flex-col w-full">
-          <div className="">
+          <div>
             <h2 className="text-sm">{label}</h2>
             <p className="text-xs font-semibold">{price}</p>
           </div>
@@ -46,9 +56,7 @@ export const LargeMenuItem: React.FC<
           <Rating />
           <button
             className="icon"
-            onClick={() => {
-              addItem({ label, price, imgSrc }) // Add item to the order store
-            }}
+            onClick={handleAddToCart}
           >
             <FontAwesomeIcon
               icon={faCirclePlus}
@@ -59,19 +67,5 @@ export const LargeMenuItem: React.FC<
         </div>
       </div>
     </>
-  )
-}
-export const LargeMenuCard: React.FC = () => {
-  return (
-    <div className="flex justify-between px-8 py-4">
-      {availableItems.map((item) => (
-        <LargeMenuItem
-          key={item.label}
-          label={item.label}
-          price={item.price}
-          imgSrc={item.imgSrc}
-        />
-      ))}
-    </div>
   )
 }

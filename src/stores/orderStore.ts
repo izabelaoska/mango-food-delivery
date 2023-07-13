@@ -1,25 +1,53 @@
 import { create } from 'zustand'
+import { nanoid } from 'nanoid'
 
-import { MenuState } from './menuStore'
-
-type OrderItem = MenuState & { id: number }
-
-type OrderStore = {
-  items: OrderItem[]
-  addItem: (item: MenuState) => void
-  removeItem: (id: number) => void
+export type Product = {
+  id: string
+  label: string
+  price: string
+  imgSrc: string
 }
 
-let id = 0
+type OrderState = {
+  items: Product[]
+}
 
-export const useOrderStore = create<OrderStore>((set) => ({
-  items: [],
-  addItem: (item) =>
-    set((state) => ({
-      items: [...state.items, { ...item, id: id++ }],
-    })),
-  removeItem: (id) =>
-    set((state) => ({
-      items: state.items.filter((item) => item.id !== id),
-    })),
+type OrderActions = {
+  addItem: (item: {
+    label: string
+    price: string
+    imgSrc: string
+  }) => void
+  removeItem: (label: string) => void
+}
+
+const initialState: OrderState = {
+  items: [] as Product[],
+}
+
+export const useOrderStore = create<
+  OrderState & OrderActions
+>((set, get) => ({
+  ...initialState,
+  addItem: (item) => {
+    const items = get().items
+    const newItem = {
+      ...item,
+      id: nanoid(),
+    }
+    set({
+      items: [...items, newItem],
+    })
+  },
+  removeItem: (label) => {
+    const items = get().items
+    const elementIndexToRemove = items.findIndex(
+      (item) => item.label === label
+    )
+    set({
+      items: items.filter(
+        (_, i) => i !== elementIndexToRemove
+      ),
+    })
+  },
 }))

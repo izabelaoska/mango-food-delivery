@@ -12,7 +12,6 @@ export const Rating = () => {
         type="radio"
         name="rating-1"
         className="mask mask-star bg-orange_fill"
-        checked
       />
       <input
         type="radio"
